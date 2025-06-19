@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Step 6 – JS Interaction</title>
 </head>
 <body>
-  <h1>hola mi nombre es Andres</h1>
-  <p>Bienvenido a mipagina</p>
+  <div id="toggleBox" style="width: 500px; height: 500px;  cursor: pointer;">
+    <img id="imgtoggleBox" src="https://i.imgur.com/IB8QN7gh.jpg" alt="" width="100%">
+  </div>
+
+  <script>
+    const box = document.getElementById("toggleBox");
+    const img = box.querySelector("img");
+    const src1 = "https://i.imgur.com/IB8QN7gh.jpg";
+    const src2 = "https://www.amalgamcollection.com/cdn/shop/articles/Ferrari_SF90_XX_Stradale_GIF_1024x1024.gif?v=1711364999";
+    box.addEventListener("click", () => {
+      img.src = img.src === src1 ? src2 : src1;
+    });
+  </script>
 </body>
 </html>
